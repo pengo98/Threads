@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Threads", "Threads\Threads.fsproj", "{BD5CEBB9-F21F-4AB7-BD74-5E83436C031B}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TPL", "TPL\TPL.fsproj", "{16C8E844-5021-4CB0-BB6F-0002D6A5B06F}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "AsyncOps", "AsyncOps\AsyncOps.fsproj", "{0548FBD5-E0F6-44BC-906F-37111D7BCA92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{BD5CEBB9-F21F-4AB7-BD74-5E83436C031B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD5CEBB9-F21F-4AB7-BD74-5E83436C031B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD5CEBB9-F21F-4AB7-BD74-5E83436C031B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16C8E844-5021-4CB0-BB6F-0002D6A5B06F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16C8E844-5021-4CB0-BB6F-0002D6A5B06F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16C8E844-5021-4CB0-BB6F-0002D6A5B06F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16C8E844-5021-4CB0-BB6F-0002D6A5B06F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0548FBD5-E0F6-44BC-906F-37111D7BCA92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0548FBD5-E0F6-44BC-906F-37111D7BCA92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0548FBD5-E0F6-44BC-906F-37111D7BCA92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0548FBD5-E0F6-44BC-906F-37111D7BCA92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
