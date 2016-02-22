@@ -1,10 +1,10 @@
 ﻿(* 
 Different ways to start async computation and the order of execution. Compare execution using same UI (main)thread vs ThreadPool thread.
-Whether the async computation will block or not depends on its async comp's behaviour (ie does it use any blocking calls inside Async ) and the way the async comp is started using one of the following calls:  
+Whether the async computation will block or not depends on its async comp's behaviour (ie does it use any blocking calls inside Async ) and depending on the way the async comp, it can reuse current thread or spawn another thread.  
 
-Async.Start
-Async.StartImmediate
-Async.RunSynchronously
+Async.Start  (spawns another thread)
+Async.StartImmediate (uses current thread)
+Async.RunSynchronously (spawns another thread)
 
 *)
 open System.Threading
