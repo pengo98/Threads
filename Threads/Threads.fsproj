@@ -48,6 +48,7 @@
     <None Include="ThreadTest2.fsx" />
     <None Include="ThreadTest3.fsx" />
     <None Include="ThreadTest4WithLock.fsx" />
+    <None Include="ThreadTest4DeadLock.fsx" />
     <None Include="ThreadTest4QueueWorkItem.fsx" />
     <None Include="ThreadTest4LostUpdateWhenMultithreadingWithoutLock.fsx" />
     <None Include="ThreadTest5JoinSleep.fsx" />
