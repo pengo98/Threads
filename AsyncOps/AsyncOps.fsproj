@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <None Include="Async1AsynchronousWaiting.fsx" />
+    <None Include="Async2DifferentWaysToStartAsyncComp.fsx" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
   </ItemGroup>
