@@ -55,6 +55,7 @@
     <None Include="ThreadTest6PassDataToThread.fsx" />
     <None Include="ThreadTest7Naming.fsx" />
     <None Include="ThreadTeset8Exception.fsx" />
+    <None Include="ThreadTest9BasicWaitHandle.fsx" />
     <Compile Include="main_ThreadTest8Background.fs" />
   </ItemGroup>
   <PropertyGroup>
