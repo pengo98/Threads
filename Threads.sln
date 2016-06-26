@@ -9,6 +9,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TPL", "TPL\TPL.fsproj", "{1
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "AsyncOps", "AsyncOps\AsyncOps.fsproj", "{0548FBD5-E0F6-44BC-906F-37111D7BCA92}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CodingExercises", "CodingExercises\CodingExercises.fsproj", "{86F95FA6-24A1-4243-BB28-05F62450F05D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0548FBD5-E0F6-44BC-906F-37111D7BCA92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0548FBD5-E0F6-44BC-906F-37111D7BCA92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0548FBD5-E0F6-44BC-906F-37111D7BCA92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86F95FA6-24A1-4243-BB28-05F62450F05D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86F95FA6-24A1-4243-BB28-05F62450F05D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86F95FA6-24A1-4243-BB28-05F62450F05D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86F95FA6-24A1-4243-BB28-05F62450F05D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
