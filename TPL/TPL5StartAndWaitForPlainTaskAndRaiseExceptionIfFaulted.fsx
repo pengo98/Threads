@@ -4,7 +4,7 @@ open System.Threading.Tasks
 
 
 module MyAsync = 
-     let sleep (time) = 
+     let sleep (time) =
         // 'FromContinuations' is the basic primitive for creating workflows
         Async.FromContinuations(fun (cont, econt, ccont) ->
             // This code is called when workflow (this operation) is executed
@@ -20,11 +20,16 @@ module Async =
             This helper funcion allows integration of Task with F# asynchronous workflow. It wires up task's IsFaulted, IsCanceled and IsCompleted continuations with F# async's current exception, cancellation and success continuations. 
             NOTE: the IsCompleted check must be made after the IsFaulted check because a fault is also considered completed. – eulerfx Jan 29 '15 at 20:29
         *)
+
         Async.FromContinuations <| fun (ok,err,cnc) ->
             t.ContinueWith(fun t ->
-            if t.IsFaulted then err(t.Exception)
+            if t.IsFaulted then 
+                printfn "faulted" 
+                err(t.Exception)
             elif t.IsCanceled then cnc(OperationCanceledException("Task wrapped with Async.AwaitTask has been cancelled.",  t.Exception))
-            elif t.IsCompleted then ok()
+            elif t.IsCompleted then 
+                printfn "completed"
+                ok()
             else failwith "invalid Task state!"
             )
             |> ignore
@@ -57,10 +62,15 @@ let sleep2 = async {
 }
 
 let sleep3 = async {
-  do! sleepy |> Async.startAsPlainTask |> Async.awaitTaskUnit
+    do!
+    async {
+        do! Async.Sleep 2000
+        printfn "awake"
+    } |> Async.startAsPlainTask |> Async.awaitTaskUnit
 }
 
 // call the workflows
+sleepy |> Async.RunSynchronously
 sleepy |> Async.startAsPlainTask |> ignore
 sleep2 |> Async.Start
 sleep3 |> Async.Start
@@ -69,8 +79,7 @@ sleep3 |> Async.Start
 // Async.Await not catching Task exception
 // http://stackoverflow.com/questions/25166363/async-await-not-catching-task-exception
 Task.Factory.StartNew(Action(fun _ -> failwith "oops"))
-|> Async.awaitTaskUnit
-|> Async.Ignore
+|> Async.AwaitIAsyncResult
 |> Async.RunSynchronously
 
 Task.Factory.StartNew(fun _ -> failwith "oops"                              
